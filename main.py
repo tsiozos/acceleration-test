@@ -5,6 +5,6 @@ for i in range(100):
         control.wait_micros(10000) #wait 10 millis
     sg /= 100
     sg /= 1024  #convert to g
-    sg = sg * 9.81  # convert to m/sec^2
-    serial.write_value("g (m/s^2)", Math.round_with_precision(sg,2))
+    sg = sg * 9.81 - 9.81  # convert to m/sec^2 and subtract earth accel
+    serial.write_string(str(input.running_time()/1000)+", "+str(sg))
     basic.pause(1000)

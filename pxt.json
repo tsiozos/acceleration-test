@@ -1,5 +1,5 @@
 {
-    "name": "acceleration test",
+    "name": "acceleration test with averaging",
     "description": "",
     "dependencies": {
         "core": "*",
